@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:react-hooks/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["/*.*"],
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "default-case": 0,
+    "consistent-return": 0,
+    "camelcase": "off",
+    "no-undef": 0,
+    "no-plusplus": 0,
+    "no-return-assign": 0,
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/state-in-constructor": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/button-has-type": 0,
+    "react/prop-types": 0,
+    "no-shadow": 0,
+    "prefer-destructuring": 0,
+    "react/no-unused-state": 0,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-no-constructed-context-values": 0,
+    "react/react-in-jsx-scope": 0,
+    "arrow-body-style": 0,
+    "react/function-component-definition": 0,
+    "react/destructuring-assignment": 0,
+    "no-restricted-syntax": 0,
+    "guard-for-in": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": 1,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/interactive-supports-focus": 0,
+    "react/require-default-props": 0
+  }
+}

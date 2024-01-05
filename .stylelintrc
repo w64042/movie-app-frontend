@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "overrides": [
+    {
+      "files": ["**/*.{css,js,jsx,ts,tsx}"],
+      "customSyntax": "@stylelint/postcss-css-in-js",
+      "rules": {
+        "value-keyword-case": null
+      }
+    }
+  ],
+  "rules": {
+    "function-no-unknown": [true, { "ignoreFunctions": ["/\\${/"] }]
+  }
+}
