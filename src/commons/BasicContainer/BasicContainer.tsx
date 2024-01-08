@@ -13,7 +13,7 @@ export const BasicContainer = styled.div<IBasicContainerProps>`
   justify-content: ${({ isCentered }) => (isCentered ? 'center' : 'start')};
   font-size: ${({ theme }) => theme.fontSize.m};
   background-color: ${({ theme }) => theme.colors.white};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.grey};
   box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
   padding: 2rem;
 `;

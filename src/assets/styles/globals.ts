@@ -46,7 +46,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: transparent;
     border: 1px solid #fff !important; 
   }
-
+  .ant-popover {
+    button span {
+      color: #000 !important;
+    }
+  }
 `;
 
 export default GlobalStyle;

@@ -16,7 +16,7 @@ export const NavListItem = styled(NavLink)`
 
   &:hover,
   &.active {
-    background-color: ${({ theme }) => theme.colors.lighter};
+    background-color: ${({ theme }) => theme.colors.grey};
     color: ${({ theme }) => theme.colors.white};
   }
 `;

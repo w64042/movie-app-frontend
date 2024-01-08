@@ -15,6 +15,6 @@ export const InputStyled = styled.input`
 `;
 export const InputTextAbove = styled.p`
   font-size: ${({ theme }) => theme.fontSize.m};
-  color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.grey};
   margin-bottom: ${({ theme }) => theme.margin.s};
 `;
