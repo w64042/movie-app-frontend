@@ -1,9 +1,12 @@
 import { MainTemplate, MenuParams } from 'commons';
+import MovieList from 'modules/moviesAndSeries/MovieList';
+import SeriesList from 'modules/moviesAndSeries/SeriesList';
 
 const TestView = () => {
   return (
     <MainTemplate selected={MenuParams.dashboard}>
-      <h1>This is the test view</h1>
+      <MovieList />
+      <SeriesList />
     </MainTemplate>
   );
 };

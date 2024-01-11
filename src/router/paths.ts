@@ -1,5 +1,7 @@
 export const ROUTES = {
   DASHBOARD: '/dashboard',
+  MOVIES: '/movies',
+  SERIES: '/series',
   LOGIN: '/login',
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',

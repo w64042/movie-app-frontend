@@ -66,15 +66,14 @@ export const ForgotPasswordForm = () => {
         <FormikProvider value={formik}>
           {errMessage && <ErrMessage errMessage={errMessage} />}
           {isEmailSend && (
-            <Text type='success'>Wysłano mail z linkiem do zmiany hasła</Text>
+            <Text type='success'>Mail zawierający instrukcje zmiany hasła został wysłany</Text>
           )}
           <LoginFormWrapper method='POST' onSubmit={formik.handleSubmit}>
             <LoginTitle>Przypomnij hasło</LoginTitle>
             <Input
               type='text'
-              placeholder='Login'
+              placeholder='Twój login'
               name='username'
-              textAbove='Wprowadź login'
               onChange={(e) => {
                 setUsername(e.target.value);
                 formik.setFieldValue('username', e.target.value);

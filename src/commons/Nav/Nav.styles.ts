@@ -8,7 +8,9 @@ export const NavListItem = styled(NavLink)`
   padding-left: 10%;
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.white};
+  line-height: 1;
+  transition: 0.3s ease-in-out;
 
   &:first-child {
     margin-top: 30%;
@@ -16,7 +18,8 @@ export const NavListItem = styled(NavLink)`
 
   &:hover,
   &.active {
-    background-color: ${({ theme }) => theme.colors.grey};
+    background-color: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.white};
   }
 `;
+   

@@ -14,7 +14,7 @@ export const useLogout = () => {
         data,
         {
           headers: {
-            Authorization: `Bearer ${cookies.get('User')?.access_token}`,
+            'Authorization': `Bearer ${cookies.get('User')?.access_token}`,
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
           },

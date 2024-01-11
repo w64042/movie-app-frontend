@@ -16,7 +16,7 @@ export const LoginForm = () => {
   const [errMessage, setErrMessage] = useState<string>('');
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [cookies, setCookie, removeCookie] = useCookies();
+  const [cookies, setCookie] = useCookies();
   const { mutate: login, isLoading: isLoginLoading } = useLogin();
   const navigate = useNavigate();
 
@@ -32,12 +32,14 @@ export const LoginForm = () => {
   ) => {
     login(values, {
       onSuccess: (res) => {
-          console.log(res)
-        if (res.error) {
-          setErrMessage(res.message);
+        if (res.data?.error) {
+          setErrMessage(res.data.message);
         } else {
           setErrMessage('');
           setCookie('User', res, { path: '/', maxAge: 3600 });
+          if(cookies.User?.access_token){
+            navigate('/dashboard');
+          }
         }
       },
       onError: (error) => {
@@ -58,7 +60,6 @@ export const LoginForm = () => {
     enableReinitialize: true,
     onSubmit: submitForm,
   });
-
   useEffect(() => {
     if (cookies.User?.access_token) {
       navigate('/dashboard');
@@ -80,7 +81,7 @@ export const LoginForm = () => {
           <FormikProvider value={formik}>
             {errMessage && <ErrMessage errMessage={errMessage} />}
             <LoginFormWrapper method='POST' onSubmit={formik.handleSubmit}>
-              <LoginTitle>Dobrze Cię widzieć!</LoginTitle>
+              <LoginTitle>Dobrze Cię widzieć! 👋</LoginTitle>
               <Input
                 type='text'
                 placeholder='Twój login'

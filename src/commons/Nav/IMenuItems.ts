@@ -4,7 +4,7 @@ export interface ISectionItem {
   subSections?: ISectionItem[];
 }
 
-export type IMenuTypes = 'Finance' | 'Dashboard';
+export type IMenuTypes = 'Movies' | 'Series' | 'Dashboard';
 
 export interface IMenuItem {
   name: string;

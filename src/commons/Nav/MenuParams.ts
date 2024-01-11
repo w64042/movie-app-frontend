@@ -6,7 +6,7 @@ import {
 
 export class MenuParams {
   public static readonly dashboard: IMenuItem = {
-    name: 'Pulpit',
+    name: 'Panel główny',
     route: ROUTES.DASHBOARD,
     type: 'Dashboard',
     sections: [
@@ -43,6 +43,31 @@ export class MenuParams {
   //   ],
   // };
 
+    public static readonly movies: IMenuItem = {
+    name: 'Filmy',
+    route: ROUTES.MOVIES,
+    type: 'Movies',
+    sections: [
+      {
+        name: 'Przeglądaj filmy',
+        route: ROUTES.MOVIES,
+      },
+    ],
+  };
+
+  // lista seriali
+  public static readonly series: IMenuItem = {
+    name: 'Seriale',
+    route: ROUTES.SERIES,
+    type: 'Series',
+    sections: [
+      {
+        name: 'Przeglądaj seriale',
+        route: ROUTES.SERIES,
+      },
+    ],
+  };
+
   /**
    * Get all menu params
    * @private
@@ -50,5 +75,7 @@ export class MenuParams {
 
   public static readonly menu: IMenuItem[] = [
     MenuParams.dashboard,
+    MenuParams.movies,
+    MenuParams.series,
   ];
 }

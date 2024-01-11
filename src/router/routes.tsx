@@ -30,6 +30,14 @@ export const routes = createHashRouter([
     element: <ProtectedRoute path={ROUTES_DASHBOARD.MY_ACCOUNT} />,
   },
   {
+    path: `${ROUTES.MOVIES}`,
+    element: <ProtectedRoute path={<TestView />} />,
+  },
+  {
+    path: `${ROUTES.SERIES}`,
+    element: <ProtectedRoute path={<TestView />} />,
+  },
+  {
     path: `${ROUTES_DASHBOARD.MY_ACCOUNT}`,
     element: <ProtectedRoute path={<TestView />} />,
   },
