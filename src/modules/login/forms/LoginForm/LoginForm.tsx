@@ -37,9 +37,7 @@ export const LoginForm = () => {
         } else {
           setErrMessage('');
           setCookie('User', res, { path: '/', maxAge: 3600 });
-          if(cookies.User?.access_token){
-            navigate('/dashboard');
-          }
+          navigate('/dashboard');
         }
       },
       onError: (error) => {
