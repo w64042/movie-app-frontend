@@ -3,13 +3,14 @@ import {
   ROUTES_DASHBOARD,
   ROUTES,
 } from 'router/paths';
-import { MenuParams } from 'commons';
 import TestView from 'modules/test/views/TestView';
 import LoginLayoutView from 'modules/login/views/LoginLayout/LoginLayoutView';
 import { ProtectedRoute } from 'commons/Secure/ProtectedRoute';
 import ForgotPasswordView from 'modules/login/views/ForgotPasswordView/ForgotPasswordView';
 import ResetPasswordView from 'modules/login/views/ResetPasswordView/ResetPasswordView';
 import CreateAccountView from 'modules/createAccount/CreateAccountView';
+import MovieListView from 'modules/moviesAndSeries/views/moviesAndSeries/MovieListView';
+import SeriesListView from 'modules/moviesAndSeries/views/moviesAndSeries/SeriesListView';
 
 export const routes = createHashRouter([
   {
@@ -32,11 +33,11 @@ export const routes = createHashRouter([
   },
   {
     path: `${ROUTES.MOVIES}`,
-    element: <ProtectedRoute path={<TestView />} />,
+    element: <ProtectedRoute path={<MovieListView />} />,
   },
   {
     path: `${ROUTES.SERIES}`,
-    element: <ProtectedRoute path={<TestView />} />,
+    element: <ProtectedRoute path={<SeriesListView />} />,
   },
   {
     path: `${ROUTES_DASHBOARD.MY_ACCOUNT}`,

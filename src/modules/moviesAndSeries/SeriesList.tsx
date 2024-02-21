@@ -5,12 +5,21 @@ import Element from './Element';
 
 const SeriesList = () => {
   const { data: series, error, isLoading } = useQuery("seriesData", getSeries);
+
+  if (isLoading) {
+    return <div>Pobieranie filmów...</div>;
+  }
+
   return (
-    <SeriesListStyled>
-      {/* {series?.map((serie: any) => (
-       <Element movie={serie} />
-      ))} */}
-    </SeriesListStyled>
+    <>
+      <h1>Seriale, warte Twojego czasu</h1>
+
+      <SeriesListStyled>
+        {series?.map((serie: any) => (
+          <Element movie={serie} key={serie.title + Math.random()} />
+        ))}
+      </SeriesListStyled>
+    </>
   );
 }
 
