@@ -5,6 +5,7 @@ export const ROUTES = {
   LOGIN: '/login',
   FORGOT_PASSWORD: '/forgot-password',
   RESET_PASSWORD: '/reset-password',
+  CREATE_ACCOUNT: '/create-account',
 };
 
 export const ROUTES_DASHBOARD = {

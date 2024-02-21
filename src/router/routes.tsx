@@ -9,6 +9,7 @@ import LoginLayoutView from 'modules/login/views/LoginLayout/LoginLayoutView';
 import { ProtectedRoute } from 'commons/Secure/ProtectedRoute';
 import ForgotPasswordView from 'modules/login/views/ForgotPasswordView/ForgotPasswordView';
 import ResetPasswordView from 'modules/login/views/ResetPasswordView/ResetPasswordView';
+import CreateAccountView from 'modules/createAccount/CreateAccountView';
 
 export const routes = createHashRouter([
   {
@@ -48,5 +49,13 @@ export const routes = createHashRouter([
   {
     path: `${ROUTES.RESET_PASSWORD}`,
     element: <ResetPasswordView />,
+  },
+  {
+    path: `${ROUTES.CREATE_ACCOUNT}`,
+    element: <CreateAccountView />,
+  },
+  {
+    path: '*',
+    element: <Navigate to={`${ROUTES.LOGIN}`} />,
   },
 ]);

@@ -105,6 +105,7 @@ export const LoginForm = () => {
               <LoginButton text='Zaloguj' />
             </LoginFormWrapper>
           </FormikProvider>
+          <Link to={`${ROUTES.CREATE_ACCOUNT}`}>Dołącz do Stream Generation</Link>
           <Link to={`${ROUTES.FORGOT_PASSWORD}`}>Zapomniałem hasła</Link>
         </CenterElements>
       )}
