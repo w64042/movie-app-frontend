@@ -4,10 +4,8 @@ import { useMutation } from 'react-query';
 import { Cookies } from 'react-cookie';
 import { API_ROUTE_LISTS } from '../apiRoutes';
 /* eslint no-underscore-dangle: 0 */
-export const useGetLists = () => {
+export const useGetLists = async () => {
     const cookies = new Cookies();
-
-    return useMutation(async (data: any) => {
         try {
             const res = await axios.get(
                 process.env.REACT_APP_SERVER_URL + API_ROUTE_LISTS.lists,
@@ -25,5 +23,4 @@ export const useGetLists = () => {
             console.error('create list error', err);
             return err.response;
         }
-    });
 };

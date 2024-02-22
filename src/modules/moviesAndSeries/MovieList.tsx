@@ -9,7 +9,6 @@ interface MyComponentProps {
 }
 
 const MovieList: React.FC<MyComponentProps> = (props) => {
-  const [errMessage, setErrMessage] = useState<string>('');
   const { data: movies, error, isLoading } = useQuery("moviesData", getMovies);
   const ref = useRef(null);
   if (isLoading) {

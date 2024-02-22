@@ -5,6 +5,7 @@ import { ErrMessage, Spinner } from 'commons';
 import { SuccessMessage } from 'commons/SuccessMessage/SuccessMessage';
 import { useCreateList } from 'api/lists/hooks/useCreateList';
 import { ListsStyled } from './views/ListsStyled';
+import UserLists from './components/ListSingle';
 
 const Lists = () => {
   const [name, setName] = useState<string>('');
@@ -68,10 +69,7 @@ const Lists = () => {
     <>
       <h1>Twoje listy</h1>
       <ListsStyled>
-        <p>Nic tutaj nie ma...
-          <br /><small>PS. martwimy się, że nic nie oglądasz</small>
-        </p>
-
+        <UserLists />
         <Popover
           style={{ width: 500 }}
           content={hoverContent}
