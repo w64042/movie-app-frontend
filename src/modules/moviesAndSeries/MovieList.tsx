@@ -26,9 +26,10 @@ const MovieList: React.FC<MyComponentProps> = (props) => {
       <h1>Filmy, które musisz zobaczyć</h1>
      {!props.isOwnPage && <div><button onClick={scrollBottom}>Pssst. jeśli szukasz seriali kliknij tutaj</button></div>}
       <MoviesListStyled>
-        {movies?.map((movie: any) => (
+        {movies.length > 0 && movies.map((movie: any) => (
           <Element movie={movie} key={movie.title + Math.random()} />
         ))}
+        {movies.length < 1 && <div>Brak filmów do wyświetlenia</div>}
       </MoviesListStyled>
       <div ref={ref} />
     </>

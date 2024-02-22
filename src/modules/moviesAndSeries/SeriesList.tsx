@@ -7,7 +7,7 @@ const SeriesList = () => {
   const { data: series, error, isLoading } = useQuery("seriesData", getSeries);
 
   if (isLoading) {
-    return <div>Pobieranie filmów...</div>;
+    return <div>Pobieranie seriali...</div>;
   }
 
   return (
@@ -15,9 +15,10 @@ const SeriesList = () => {
       <h1>Seriale, warte Twojego czasu</h1>
 
       <SeriesListStyled>
-        {series?.map((serie: any) => (
+        {series.length > 0 && series?.map((serie: any) => (
           <Element movie={serie} key={serie.title + Math.random()} />
         ))}
+        {series.length < 1 && <div>Brak seriali do wyświetlenia</div>}
       </SeriesListStyled>
     </>
   );

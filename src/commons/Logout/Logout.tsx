@@ -62,7 +62,7 @@ export const Logout = () => {
     <Popover
       style={{ width: 500 }}
       content={hoverContent}
-      title='Wylogować?'
+      title='Czy chcesz się wylogować?'
       trigger={'click'}
       open={hovered}
       onOpenChange={handleHoverChange}

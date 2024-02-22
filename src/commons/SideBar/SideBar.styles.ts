@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SideBarWrapper = styled.aside`
   width: 25rem;
+  min-width: 80px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
