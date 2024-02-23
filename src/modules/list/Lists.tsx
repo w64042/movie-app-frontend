@@ -27,6 +27,7 @@ const Lists = () => {
           setErrMessage('');
           setSuccessMessage('Lista została dodana');
           setName('');
+
         }
       },
       onError: (error) => {
@@ -69,7 +70,7 @@ const Lists = () => {
     <>
       <h1>Twoje listy</h1>
       <ListsStyled>
-        <UserLists />
+        <UserLists refetchFromCreate={name} />
         <Popover
           style={{ width: 500 }}
           content={hoverContent}
